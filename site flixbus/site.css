@@ -1,0 +1,156 @@
+* { padding: 0; margin: 0; border: 0; font-size: 1em; color: #444; font-family: "Roboto Condensed light", "Arial", sans-serif; }
+html, body, div.container { width: 100%; height: 100%; }
+
+/* basisbreedte van content*/
+.view { width: 1200px; margin: 0 auto; text-align: center; }
+
+/* alle links */
+a:hover, a:active, a:focus { color: #888; text-decoration: none; }
+
+/* balk bovenaan*/
+div.menubalk { position: fixed; top: 0px; left: 0px; width: 100%; text-align: center; background: #73d700; z-index: 20; }
+div.menubalk td:first-child { text-align: left; }
+div.menubalk td:last-child { text-align: right; }
+
+img.logo { height: 3.125em; vertical-align: middle; }
+a.download, a.download:link, a.download:visited { display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; background-image: url(images/download.svg); background-size: contain; background-repeat: no-repeat; }
+a.download:hover, a.download:active, a.download:focus { display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; background-image: url(images/downloadgrijs.svg); background-size: contain; background-repeat: no-repeat; }
+a.loginlink, a.loginlink:link, a.loginlink:visited { display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; background-image: url(images/avatar.svg); background-size: contain; background-repeat: no-repeat; }
+a.loginlink:hover, a.loginlink:active, a.loginlink:focus { display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; background-image: url(images/avatargrijs.svg); background-size: contain; background-repeat: no-repeat; }
+a.loguitlink, a.loguitlink:link, a.loguitlink:visited { display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; background-image: url(images/slotje.svg); background-size: contain; background-repeat: no-repeat; }
+a.loguitlink:hover, a.loguitlink:active, a.loguitlink:focus { display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; background-image: url(images/slotjegrijs.svg); background-size: contain; background-repeat: no-repeat; }
+input.search { border-radius: 2em; padding: 0.25em; margin-right: 1.5em; background-image: url(images/search.svg); background-size: 1em; background-repeat: no-repeat; background-position: calc(100% - 0.5em) 50%; padding-right: 1.5em; }
+a.zoeklink { display: none; }
+
+div.loginvenster { display: none; position: absolute; top: 100px; left: 400px; padding: 10px; background: white; border: 1px solid #73d700; border-radius: 5px; }
+div.loginvenster input[type=email], div.loginvenster input[type=password] { padding: 5px; border-radius: 5px; background: white; border: 1px solid #c8c8c8; }
+div.loginvenster input[type=submit] { padding: 10px 20px; border-radius: 5px; background: #ffad00; color: white; font-weight: bold; -webkit-appearance: none; /* <- ios-fix tegen ronde submitknop */ }
+div.loginvenster input[type=submit]:hover { cursor: pointer; background: #ff9800; }
+div.loginvenster:after, div.loginvenster:before { bottom: 100%; left: 95%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+div.loginvenster:after { border-color: rgba(255, 255, 255, 0); border-bottom-color: #ffffff; border-width: 10px; margin-left: -10px; }
+div.loginvenster:before { border-color: rgba(115, 215, 0, 0); border-bottom-color: #73d700; border-width: 11px; margin-left: -11px; }
+
+
+
+
+/* header plus inhoud*/
+
+header { width: 100%; padding: 20vh 0vh 10vh; margin: 0 auto; background-image: url(https://cdn.flixbus.de/styles/flixbus_w1600/s3/2017-12/Heroimage_1712_v2.jpg?itok=PvCD_G4t); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
+header table { background: white; margin: 0 auto; vertical-align: middle; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75); border-radius: 0.35em; }
+header table td { padding: 10px 40px; }
+header table td.kop { font-size: 1.5em; font-weight: 100; text-align: center; }
+header table span { display: block; font-weight: bold; padding-bottom: 10px; }
+header div.hart { display: inline-block; width: 1.2em; height: 1.2em; background: url(images/hartleeg.svg); background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; margin: 0em 0.25em; cursor: pointer; }
+header div.hartactief { display: inline-block; width: 1.2em; height: 1.2em; background: url(images/hart.svg); background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; margin: 0em 0.25em; cursor: pointer; }
+
+
+span.kopklein { display: block; font-weight: bold; text-align: center; }
+input[type="checkbox"] { display:none; }
+input[type="checkbox"] + label { }
+input[type="checkbox"] + label.check span { display:inline-block; width: 32px; height: 24px; margin: 0px 10px 0px 0px; vertical-align: middle; background-image: url(images/check.png); background-position: 0px 0px; background-repeat: no-repeat; background-size: 100%; cursor: pointer; }
+input[type="checkbox"]:checked + label.check span { background-position: 0px -64px; }
+/* de ster van favoriet is ook een checkbox */
+input[type="checkbox"] + label.ster span { display:inline-block; width: 32px; height: 24px; margin: 0px 10px 0px 0px; vertical-align: middle; background-image: url(images/star.svg); background-position: 0px 0px; background-repeat: no-repeat; background-size: 100%; cursor: pointer; transition: 1s transform, 0.5s 0.25s background-image; }
+input[type="checkbox"]:checked + label.ster span { background-position: 0px 0px; background-image: url(images/stargold.svg); transform: rotate(720deg); }
+
+/* 2 oranje knoppen met plaatje*/
+div.detailsdownload, div.detailsopslaan { padding: 1em 1em 1em 3em; text-align: right; border-radius: 5px; background-color: #ffad00; color: white; font-weight: bold; border: 2px solid #ffad00; background-repeat: no-repeat; background-position: 0.5em 50%; background-size: 2em; transition: 0.25s all; }
+div.detailsdownload:hover, div.detailsopslaan:hover { background-color: #fff; border: 2px solid #ff9800; color: #ffad00; transition: 0.25s all; cursor: pointer; }
+div.detailsdownload { background-image: url(images/download.svg); }
+div.detailsopslaan { background-image: url(images/open-book.svg); }
+div.detailsdownload:hover { background-image: url(images/downloadoranje.svg); }
+div.detailsopslaan:hover { background-image: url(images/open-bookoranje.svg); }
+
+textarea { border: 1px solid #ffad00; border-radius: 5px; padding: 0.5em; width: 20em; height: 4em; }
+div.detailscommentaaropslaan { padding: 0.25em 0.5em; text-align: center; border-radius: 5px; background-color: #ffad00; color: white; font-weight: bold; border: 2px solid #ffad00; background-size: 2em; transition: 0.25s all; }
+div.detailscommentaaropslaan:hover { background-color: white; color: #ffad00; cursor: pointer; }
+
+
+
+/* content */
+/* overzichtspagina */
+span.kop, span.selectiekop { display: block; font-weight: 100; font-size: 1.5em; padding: 2em 1em 1em; }
+span.selectiekop { text-align: left; }
+div.blok { display: inline-block; vertical-align: top; border: 1px solid #73d700; border-radius: 0.35em; width: 23%; margin: calc(1% - 3px); }
+div.blok div.image { display: block; width: 100%; height: 100px; background-size: cover; border-top-left-radius: 0.25em; border-top-right-radius: 0.25em; background-repeat: no-repeat; background-position: 50% 50%; }
+div.blok span.titel { display: block; font-weight: bold; font-size: 0.9em; padding: 0.5em 0; color: #444; }
+div.blok span.tekst { display: block; height: 4em; overflow: hidden; font-size: 0.8em; padding: 0.5em 0; color: #444; text-align: justify; padding: 0px 1em; }
+div.blok table.waardering { width: 95%; margin: 0 auto; }
+div.blok table.waardering td { text-align: left; }
+div.blok table.waardering td:last-child { text-align: right; }
+div.blok table.waardering img { width: 1.35em; height: 1.35em; vertical-align: middle; }
+div.blok a.continue, div.blok a.continue:link, div.blok a.continue:visited { display: block; padding: 0.5em 0; color: #ffad00; font-weight: bold; text-align: center; text-decoration: none; }
+div.blok a.continue:hover, div.blok a.continue:active, div.blok a.continue:focus { display: block; padding: 0.5em 0; color: #ff9800; font-weight: bold; text-align: center; text-decoration: none; }
+
+/* de verschillende states van de downloadknop in het overzicht wanneer je ingelogd bent */
+div.downloadcheck { width: 1.35em; height: 1.35em; vertical-align: middle; background-image: url(images/check-mark.svg); background-size: contain; transition: opacity 0.5s; }
+div.downloadloading { width: 1.35em; height: 1.35em; vertical-align: middle; background-image: url(images/loading.gif); background-size: contain; transition: opacity 0.5s; }
+div.downloadknop { width: 1.35em; height: 1.35em; vertical-align: middle; background-image: url(images/downloadzwart.svg); background-size: contain; transition: opacity 0.5s; }
+div.downloadknop:hover { cursor: pointer; opacity: 0.25; transition: opacity 0.5s; }
+
+
+/* verhalenpagina */
+div.knopvorige { position: relative; display: block; width: 4em; background: #ffad00; border: 1px solid #ffad00; color: white; font-weight: bold; padding: 11px 20px 10px 10px; cursor: pointer; }
+div.knopvorige:after, div.knopvorige:before { right: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+div.knopvorige:after { border-color: rgba(255, 173, 0, 0); border-right-color: #ffad00; border-width: 23px; margin-top: -23px; }
+div.knopvorige:before { border-color: rgba(255, 173, 0, 0); border-right-color: #ffad00; border-width: 21px; margin-top: -21px; }
+div.knopvorige:hover { background: #ff9800; border: 1px solid #ff9800; }
+div.knopvorige:hover:after, div.knopvorige:hover:before { border-color: rgba(255, 152, 0, 0); border-right-color: #ff9800; }
+
+div.verhaaltitelbalk { display: table; width: calc(74% - 8em); padding: 1em; margin-left: 13%; }
+div.verhaaltitelbalk span, div.verhaaltitelbalk div { display: table-cell; }
+span.verhaaltitel { font-size: 2em; font-weight: 100; display: inline; white-space: nowrap; }
+div.verhaal { white-space: pre-line; text-align: justify; display: inline-block; font-weight: 100; font-size: 1.2em; max-width: 75%; }
+div.verhaalplaatje { display: inline-block; max-width: 75%; }
+div.verhaalplaatje img { max-width: 100%; }
+
+
+
+footer { display: block; width: 100%; height: 25vw; background: url(https://www.flixbus.nl/app/styles/images/footer/footer-desktop.svg); background-position: 50% 100%; background-repeat: no-repeat; background-size: 100vw; }
+
+
+
+
+/* afwijkende maten en grid van 2 blokken bij tablet: 2x 48% + marge van 1% - rand */
+@media screen and (max-width: 1200px) {
+	.view { width: 100%; margin: 0 auto; text-align: center; }
+	div.blok { width: 48%; margin: calc(1% - 3px); }
+	header table.gesloten, header table.open { width: 98%; }
+}
+
+/* op mobiel is gridblok 96% + marge van 2% - rand */
+@media screen and (max-width: 600px) {
+	.view { width: 100%; margin: 0 auto; text-align: center; }
+	div.zoekgesloten a.zoeklink, a.zoeklink:link, a.zoeklink:visited { display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; background-image: url(images/searchwit.svg); background-size: contain; background-repeat: no-repeat; }
+	div.zoekopen a.zoeklink, a.zoeklink:link, a.zoeklink:visited { display: inline-block; width: 1.5em; height: 1.5em; margin-left: 1.5em; vertical-align: middle; background-image: url(images/sluit.svg); background-size: contain; background-repeat: no-repeat; }
+	div.zoekgesloten input.search { display: none; }
+	div.zoekopen input.search { width: 10em; margin-right: 0; }
+	div.zoekopen a.download { display: none; }
+	div.zoekopen a.loginlink, div.zoekopen a.loguitlink { display: none; }
+	div.zoekgesloten a.loginlink, div.zoekgesloten a.loguitlink { margin-left: 1.5em; }
+	
+	div.blok { width: 96%; margin: calc(2% - 3px); }
+	/* het overzichtsfilter kan met javascript geopend en gesloten worden, en heeft dus meerdere classnames */
+	header table.gesloten { margin: 0 auto; }
+	header table.gesloten tr:nth-child(1), header table.open tr:nth-child(1) { background-image: url(images/filter.svg); background-repeat: no-repeat; background-size: 1.5em; background-position: 100% 50%; }
+	header table.gesloten tr:nth-child(2) { display: none; }
+	header table.open { position: absolute; z-index: 10; left: 0.25em; margin: 0 auto; }
+	header table td { display: block; padding: 5px 0.5vw; }
+	header table span { padding-top: 0.25em; }
+	header table td:first-child span { padding-top: 0; }
+	textarea { width: calc(86vw - 6em); height: 4em; }
+	
+	/* op de mobiel moet de optietabel iets anders ingedeeld worden om het passend te krijgen */
+	header table.opties td { display: table-cell; text-align: center; }
+	header table.opties tr:first-child td:last-child { display: block; width: 3em; text-align: center; }
+	header table.opties tr:first-child td:last-child span { margin-left: 1em; }
+	header table.opties tr:last-child td:first-child { display: block; width: 4em; text-align: center; }
+	header table.opties tr:last-child td:first-child span { margin-left: 1em; }
+	
+	div.detailsdownload, div.detailsopslaan { display: inline-block; width: 1em; padding: 1em; overflow: hidden; text-indent: 3em; white-space: nowrap; } 
+	
+	div.verhaaltitelbalk { width: calc(94% - 3em); padding: 1em; margin-left: 3%; }
+	span.verhaaltitel { font-size: 1.5em; }
+	div.verhaal { max-width: 95%; }
+	div.verhaalplaatje { max-width: 95%; }
+}

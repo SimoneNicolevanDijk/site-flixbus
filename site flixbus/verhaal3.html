@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flixbus travelreading</title>
+    <link rel="stylesheet" href="site.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin-ext,cyrillic-ext" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="site.js"></script>
+</head>
+
+<body onload="initieer(0);">
+<div class="container">
+	<div class="menubalk zoekgesloten" id="menubalk">
+		<table class="view"><tr>
+			<td><img class="logo" src="https://cdn.flixbus.de/2017-04/preview.png" alt="logo" /> <a href="#download" class="download"></a></td>
+			<td></td>
+			<td>
+				<input type="text" class="search" id="zoekbalk">
+					<a href="#zoeken" class="zoeklink" onclick="wisselZoekbalkClass();"></a>
+					<a href="#loginvenster" class="loginlink" id="loginlink" onclick="openLoginVenster(); return false;"></a>
+					<div class="loginvenster" id="loginvenster"><form action="ingelogd.html" method="post"><table>
+						<tr><td colspan="2"><input type="email" id="loginemail" autocomplete="on" required placeholder="E-mailadres"></td></tr>
+						<tr><td colspan="2"><input type="password" required autocomplete="on" placeholder="Wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Moet minimaal 1 cijfer, 1 hoofletter en 1 kleine letter bevatten, en minstens 8 tekens lang zijn"></td></tr>
+						<tr><td><a href="registreer.html">Registreren</a></td><td><input type="submit" value="Inloggen"></td></tr>
+					</table></form></div>
+					</td>
+		</tr></table>
+	</div>
+	<header>
+		<div class="headercontent">
+			<table class="opties">
+				<tr>
+					<td><div class="detailsdownload">Download</div></td>
+					<td><span class="kopklein">Waardering</span><div class="hart" id="hart1" onmouseover="selectie(1);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 1;"></div><div class="hart" id="hart2" onmouseover="selectie(2);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 2;"></div><div class="hart" id="hart3" onmouseover="selectie(3);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 3;"></div><div class="hart" id="hart4" onmouseover="selectie(4);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 4;"></div><div class="hart" id="hart5" onmouseover="selectie(5);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 5;"></div></td>
+					<td><input type="checkbox" id="gelezen"><label for="gelezen" class="check"><span></span>Gelezen</label></td>
+				</tr>
+				<tr>
+					<td><div class="detailsopslaan">Lees later</div></td>
+					<td rowspan="2" colspan="2"><span class="kopklein">Commentaar</span><textarea></textarea><div class="detailscommentaaropslaan">Opslaan</div></td>
+				</tr>
+				<tr><td><input type="checkbox" id="favoriet"><label for="favoriet" class="ster"><span></span>Favoriet</label></td></tr>
+			</table>
+		</div>
+	</header>
+	
+	<div class="content view">
+		<div class="verhaaltitelbalk"><div class="knopvorige" onclick="location.href = 'index.html';">Vorige</div><span class="verhaaltitel">Twitter</span></div>
+		<div class="verhaal">
+		@molovich Schoenen gekocht voor Junior. Op twintig meter afstand van m’n huis. #tochnoggeslaagd #kosteenpaaruurtjesmaardanhebjeookwat
+2 minutes ago
+
+@molovich In bus terug naar huis. Balen.
+37 minutes ago
+
+@molovich Godverdomme. Heb ik naar het magazijn gemaild, krijg ik mail terug dat het boek op de tweede verdieping is. Maar daar heb ik net gekeken! #bananenrepubliek
+58 minutes ago
+
+@molovich @OudZeikwijf Nee, niet de Franse versie. Ik zoek de vertaling van Kousbroek. #stijloefeningen
+1 hour ago
+
+@molovich Met een medewerker van de bieb gezocht. Kon ook niks vinden. Zegt dat ik mailtje naar magazijn moet sturen. Duurt een kwartiertje. #alletijd
+1 hour ago
+
+@molovich De online catalogus van OBA zegt dat Stijloefeningen gewoon op de plank moet liggen. Nog maar even goed kijken. #erisnoghoop
+1 hour ago
+
+@molovich @IReert LOL.
+1 hour ago
+
+@IReert @molovich Het postkantoor op de Raadhuisstraat bestaat ook niet meer.
+1 hour ago
+
+@molovich Verdomme. Tien boeken van Queneau, maar Stijloefeningen zit er niet bij! Je vindt nooit wat je zoekt. #storyofmylife
+1 hour ago
+
+@molovich De auto waarmee ze gekomen was, reed weg. Op zoek naar een parkeerplaats, denk ik. De vrouw moest erachteraan rennen. (2/2)
+1 hour ago
+
+@molovich Net vroeg een Franse vrouw mij waar het postkantoor was. Dat postkantoor staat hier al jaren niet meer. Heb haar naar de Raadhuisstraat gestuurd. (1/2)
+1 hour ago
+
+@molovich Jezus. Ik wist niet dat Amsterdam hier zo open lag. Overal bouwputten. #noordzuidlijn #bedanktgeertdales
+1 hour ago
+
+@molovich Halte CS. Zoon slaapt. Precies op tijd.
+2 hours ago
+
+@molovich In bus 21. Naar bieb. Ben al een week op zoek naar Stijloefeningen van Queneau. Hoop dat ze ’m daar hebben. #lekkerliterair
+2 hours ago
+		</div>
+	</div>
+	
+	<footer></footer>
+</div>
+</body>
+</html>

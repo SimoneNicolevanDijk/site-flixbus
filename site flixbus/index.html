@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flixbus travelreading</title>
+    <link rel="stylesheet" href="site.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin-ext,cyrillic-ext" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="site.js"></script>
+</head>
+
+<body onload="initieer(1);">
+<div class="container">
+	<div class="menubalk zoekgesloten" id="menubalk">
+		<table class="view"><tr>
+			<td><img class="logo" src="https://cdn.flixbus.de/2017-04/preview.png" alt="logo" /> <a href="#download" class="download"></a></td>
+			<td></td>
+			<td>
+				<input type="text" class="search" id="zoekbalk">
+					<a href="#zoeken" class="zoeklink" onclick="wisselZoekbalkClass();"></a>
+					<a href="#loginvenster" class="loginlink" id="loginlink" onclick="openLoginVenster(); return false;"></a>
+					<div class="loginvenster" id="loginvenster"><form action="ingelogd.html" method="post"><table>
+						<tr><td colspan="2"><input type="email" id="loginemail" autocomplete="on" required placeholder="E-mailadres"></td></tr>
+						<tr><td colspan="2"><input type="password" required autocomplete="on" placeholder="Wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Moet minimaal 1 cijfer, 1 hoofletter en 1 kleine letter bevatten, en minstens 8 tekens lang zijn"></td></tr>
+						<tr><td><a href="registreer.html">Registreren</a></td><td><input type="submit" value="Inloggen"></td></tr>
+					</table></form></div>
+					</td>
+		</tr></table>
+	</div>
+	<header>
+		<div class="headercontent">
+			<table class="gesloten" id="filtermenu">
+				<tr><td colspan="3" class="kop" onclick="wisselFilterClass();">Filteren/sorteren</td></tr>
+				<tr>
+					<td><span>Duur</span><select><option value="1">Alle</option><option value="5">1-5 min</option><option value="10">5-10 min</option><option value="15">10-15 min</option><option value="20">15-20 min</option></select></td>
+					<td><span>Waardering minimaal</span><div class="hartactief" id="hart1" onmouseover="selectie(1);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 1;"></div><div class="hart" id="hart2" onmouseover="selectie(2);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 2;"></div><div class="hart" id="hart3" onmouseover="selectie(3);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 3;"></div><div class="hart" id="hart4" onmouseover="selectie(4);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 4;"></div><div class="hart" id="hart5" onmouseover="selectie(5);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 5;"></div></td>
+					<td><span>Sorteren</span><select><option value="bekeken">Meest bekeken</option><option value="waardering">Hoogste waardering</option><option value="nieuwste">Nieuwste vormgeving</option><option value="ongelezen">Ongelezen</option><option value="gelezen">Gelezen</option></select></td>
+				</tr>
+			</table>
+		</div>
+	</header>
+	
+	<div class="content view">
+		<span class="selectiekop">Keuze van de redactie</span>
+		<div class="blok"><div class="image" style="background-image: url(1.jpeg);"></div><span class="titel">Notitie</span><span class="tekst">Bus 21, rond het middaguur. Halte Centraal Station. Mijn zoon slaapt in zijn kinderwagen. Ik loop langs de winderige bouwputten naar de Openbare Bibliotheek. Voor de trap van de bibliotheek klampt een vrouw mij aan.</span><a href="verhaal1.html" class="continue">Continue reading</a><table class="waardering"><tr><td><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hartleeg.svg" /><img src="images/hartleeg.svg" /></td><td><img src="images/clock.svg" /> 5 min</td><td><img src="images/filter.svg" /></td></tr></table></div>
+		<div class="blok"><div class="image" style="background-image: url(2.jpeg);"></div><span class="titel">Droom</span><span class="tekst">Slierten mist zwerven rond mijn benen. Net zat ik nog in Bus 21. Het was warm, zweet parelde langs mijn slapen, mijn zoon sliep. Nu loop ik over een smal pad langs eindeloos diepe bouwputten.</span><a href="verhaal2.html" class="continue">Continue reading</a><table class="waardering"><tr><td><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hartleeg.svg" /><img src="images/hartleeg.svg" /></td><td><img src="images/clock.svg" /> 5 min</td><td><img src="images/filter.svg" /></td></tr></table></div>
+		<div class="blok"><div class="image" style="background-image: url(3.jpeg);"></div><span class="titel">Twitter</span><span class="tekst"> @molovich Schoenen gekocht voor Junior. Op twintig meter afstand van m’n huis. #tochnoggeslaagd #kosteenpaaruurtjesmaardanhebjeookwat 2 minutes ago @molovich In bus terug naar huis. Balen. 37 minutes ago @molovich Godverdomme. Heb ik naar het magazijn gemaild, krijg ik mail terug dat het boek op de tweede verdieping is. Maar daar heb ik net gekeken! #bananenrepubliek 58 minutes ago</span><a href="verhaal3.html" class="continue">Continue reading</a><table class="waardering"><tr><td><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hartleeg.svg" /><img src="images/hartleeg.svg" /></td><td><img src="images/clock.svg" /> 5 min</td><td><img src="images/filter.svg" /></td></tr></table></div>
+		<div class="blok"><div class="image" style="background-image: url(4.jpg);"></div><span class="titel">Nichterig</span><span class="tekst">Dus ik stap de bus uit, met mijn zoon in mijn wagen, en ik schrik me daar toch het apenlazarus zeg! Werkelijk heel de omgeving rond Centraal Station is open gebroken! Ik zweer het je, één grote bouwput.</span><a href="verhaal4.html" class="continue">Continue reading</a><table class="waardering"><tr><td><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hartleeg.svg" /><img src="images/hartleeg.svg" /></td><td><img src="images/clock.svg" /> 5 min</td><td><img src="images/filter.svg" /></td></tr></table></div>
+		<span class="selectiekop">Nieuwste vormgeving</span>
+		<div class="blok"><div class="image" style="background-image: url(5.jpeg);"></div><span class="titel">Hongerwinter</span><span class="tekst">Mijn voeten en handen heb ik ingezwachteld tegen de kou. Kranten tegen m’n borst. Ik duw een handkar voort waarin mijn zoon vredig ligt te slapen. Centraal Station. De tramrails liggen er kaal bij. Het hout tussen de rails is al lang weggenomen.</span><a href="verhaal5.html" class="continue">Continue reading</a><table class="waardering"><tr><td><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hartleeg.svg" /><img src="images/hartleeg.svg" /></td><td><img src="images/clock.svg" /> 5 min</td><td><img src="images/filter.svg" /></td></tr></table></div>
+		<div class="blok"><div class="image" style="background-image: url(6.jpg);"></div><span class="titel">Nico Dijkshoorn</span><span class="tekst">Ik stap uit een, ja wat is het eigenlijk?, een bus. Lijn 21? Zou zomaar kunnen. Twaalf uur. In de middag. Mijn zoon, luistert u mee?, mijn grandioze zoon, diezelfde zoon die zojuist nog die knotsgekke bus bij elkaar zat te janken alsof, alsof zijn leven ervan af hing, díe zoon ja, precies die zoon...</span><a href="verhaal6.html" class="continue">Continue reading</a><table class="waardering"><tr><td><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hartleeg.svg" /><img src="images/hartleeg.svg" /></td><td><img src="images/clock.svg" /> 5 min</td><td><img src="images/filter.svg" /></td></tr></table></div>
+		<div class="blok"><div class="image" style="background-image: url(7.jpg);"></div><span class="titel"> Verliefd</span><span class="tekst">Licht van mijn leven. Ik stapte vandaag bus 21 uit. Het was op het midden van de dag. En wat een heerlijke dag!</span><a href="verhaal7.html" class="continue">Continue reading</a><table class="waardering"><tr><td><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hartleeg.svg" /><img src="images/hartleeg.svg" /></td><td><img src="images/clock.svg" /> 5 min</td><td><img src="images/filter.svg" /></td></tr></table></div>
+		<div class="blok"><div class="image" style="background-image: url(8.jpg);"></div><span class="titel">Jules Deelder</span><span class="tekst">Kijk... daaro dan... aan de overkant... wat daar uit dat bussie komp stappe? Zie je da, da ongewasse baardkonijn achter da gifgroene babykarretje? Max Molovich... ja hoor, het is ’m... met z’n graftakkesmoelwerk... onmiskenbaar... looptlekker de pleurisintellectueel uit</span><a href="verhaal8.html" class="continue">Continue reading</a><table class="waardering"><tr><td><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hart.svg" /><img src="images/hartleeg.svg" /><img src="images/hartleeg.svg" /></td><td><img src="images/clock.svg" /> 5 min</td><td><img src="images/filter.svg" /></td></tr></table></div>
+	</div>
+	
+	<footer></footer>
+</div>
+</body>
+</html>

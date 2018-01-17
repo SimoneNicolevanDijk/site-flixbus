@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flixbus travelreading</title>
+    <link rel="stylesheet" href="site.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin-ext,cyrillic-ext" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="site.js"></script>
+</head>
+
+<body onload="initieer(0);">
+<div class="container">
+	<div class="menubalk zoekgesloten" id="menubalk">
+		<table class="view"><tr>
+			<td><img class="logo" src="https://cdn.flixbus.de/2017-04/preview.png" alt="logo" /> <a href="#download" class="download"></a></td>
+			<td></td>
+			<td>
+				<input type="text" class="search" id="zoekbalk">
+					<a href="#zoeken" class="zoeklink" onclick="wisselZoekbalkClass();"></a>
+					<a href="#loginvenster" class="loginlink" id="loginlink" onclick="openLoginVenster(); return false;"></a>
+					<div class="loginvenster" id="loginvenster"><form action="ingelogd.html" method="post"><table>
+						<tr><td colspan="2"><input type="email" id="loginemail" autocomplete="on" required placeholder="E-mailadres"></td></tr>
+						<tr><td colspan="2"><input type="password" required autocomplete="on" placeholder="Wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Moet minimaal 1 cijfer, 1 hoofletter en 1 kleine letter bevatten, en minstens 8 tekens lang zijn"></td></tr>
+						<tr><td><a href="registreer.html">Registreren</a></td><td><input type="submit" value="Inloggen"></td></tr>
+					</table></form></div>
+					</td>
+		</tr></table>
+	</div>
+	<header>
+		<div class="headercontent">
+			<table class="opties">
+				<tr>
+					<td><div class="detailsdownload">Download</div></td>
+					<td><span class="kopklein">Waardering</span><div class="hart" id="hart1" onmouseover="selectie(1);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 1;"></div><div class="hart" id="hart2" onmouseover="selectie(2);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 2;"></div><div class="hart" id="hart3" onmouseover="selectie(3);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 3;"></div><div class="hart" id="hart4" onmouseover="selectie(4);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 4;"></div><div class="hart" id="hart5" onmouseover="selectie(5);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 5;"></div></td>
+					<td><input type="checkbox" id="gelezen"><label for="gelezen" class="check"><span></span>Gelezen</label></td>
+				</tr>
+				<tr>
+					<td><div class="detailsopslaan">Lees later</div></td>
+					<td rowspan="2" colspan="2"><span class="kopklein">Commentaar</span><textarea></textarea><div class="detailscommentaaropslaan">Opslaan</div></td>
+				</tr>
+				<tr><td><input type="checkbox" id="favoriet"><label for="favoriet" class="ster"><span></span>Favoriet</label></td></tr>
+			</table>
+		</div>
+	</header>
+	
+	<div class="content view">
+		<div class="verhaaltitelbalk"><div class="knopvorige" onclick="location.href = 'index.html';">Vorige</div><span class="verhaaltitel">Hongerwinter</span></div>
+		<div class="verhaal">Mijn voeten en handen heb ik ingezwachteld tegen de kou. Kranten tegen m’n borst. Ik duw een handkar voort waarin mijn zoon vredig ligt te slapen. Centraal Station. De tramrails liggen er kaal bij. Het hout tussen de rails is al lang weggenomen. Ik word geacht het IJ over te steken om in de dorpen boven Amsterdam mijn gouden trouwring te ruilen tegen groenten en aardappelen. Maar in plaats daarvan ben ik op zoek naar Stijloefeningen van Raymond Queneau. Dat boek bestaat nog niet in de winter van 1945 (en al helemaal nog niet in de bewerking van Rudy Kousbroek), maar ik verga van de honger en ik kan niet meer normaal denken. De wind snijdt door de kranten heen.
+Op de nog niet bestaande trappen van wat later de bibliotheek zou worden houdt een vrouw mij staande. Haar zwarte haar piekt als verbrand helmgras op haar hoofd. Ze heeft ingevallen wangen, alsof ze continu heel hard op een sigaret zuigt. Ze gaat gekleed in lompen en vraagt me of dit het postkantoor is. Ze praat Engels, met een Frans accent. Zou ze joods zijn? Zou ze van het verzet zijn? Misschien wil ze het postkantoor overvallen.
+Weet ze wel wat voor gevaar ze loopt? De mof voelt dat hij aan de verliezende hand is en een kat in het nauw maakt rare sprongen. Ik wil haar graag helpen, maar ik durf niet. Ze kijkt achter zich. Een man fietst weg op een fiets zonder banden. Ze rent er achteraan.
+In de denkbeeldige bibliotheek is het pikkedonker. Met een knijpkat schep ik licht. De bibliotheek staat grotendeels onder water. In mijn lichtbundel drijven boeken. Kasten liggen omver. Een duif vliegt op. Ik schrik en laat de knijpkat vallen. Mijn ogen wennen langzaam aan de duisternis. Bij de Q vind ik een aantal boeken van Queneau. Maar Stijloefeningen zit er niet bij. Ik kijk in de systeemkaartenbak. Stijloefeningen is wel degelijk aanwezig, zegt een kaartje. Ik waad door het water terug naar de Q. ‘Blijf staan!’ zegt een stem. Ik draai me om en zie een man met een vlassig baardje een jachtgeweer op mij richten. ‘Wat moet je,’ zegt hij. ‘Ik ben op zoek naar Stijloefeningen van Raymond Queneau,’ antwoord ik. De man laat zijn jachtgeweer zakken en begint mee te zoeken.
+Maar ook hij kan het boek niet vinden. Hij raadt me aan het magazijn te proberen. Daar moet nog een exemplaar liggen. Het magazijn bevindt zich in de kelders, die staan helemaal onder water. Ik staak mijn zoektocht.
+Uren later, even buiten de stad, op een mestvaalt waar tot voor kort de 18e eeuwse boerenhofstede Bosch en Lommer gelegen was, vind ik een paar babyschoentjes in redelijke staat.</div>
+	</div>
+	
+	<footer></footer>
+</div>
+</body>
+</html>

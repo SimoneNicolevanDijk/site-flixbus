@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flixbus travelreading</title>
+    <link rel="stylesheet" href="site.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin-ext,cyrillic-ext" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="site.js"></script>
+</head>
+
+<body onload="initieer(0);">
+<div class="container">
+	<div class="menubalk zoekgesloten" id="menubalk">
+		<table class="view"><tr>
+			<td><img class="logo" src="https://cdn.flixbus.de/2017-04/preview.png" alt="logo" /> <a href="#download" class="download"></a></td>
+			<td></td>
+			<td>
+				<input type="text" class="search" id="zoekbalk">
+					<a href="#zoeken" class="zoeklink" onclick="wisselZoekbalkClass();"></a>
+					<a href="#loginvenster" class="loginlink" id="loginlink" onclick="openLoginVenster(); return false;"></a>
+					<div class="loginvenster" id="loginvenster"><form action="ingelogd.html" method="post"><table>
+						<tr><td colspan="2"><input type="email" id="loginemail" autocomplete="on" required placeholder="E-mailadres"></td></tr>
+						<tr><td colspan="2"><input type="password" required autocomplete="on" placeholder="Wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Moet minimaal 1 cijfer, 1 hoofletter en 1 kleine letter bevatten, en minstens 8 tekens lang zijn"></td></tr>
+						<tr><td><a href="registreer.html">Registreren</a></td><td><input type="submit" value="Inloggen"></td></tr>
+					</table></form></div>
+					</td>
+		</tr></table>
+	</div>
+	<header>
+		<div class="headercontent">
+			<table class="opties">
+				<tr>
+					<td><div class="detailsdownload">Download</div></td>
+					<td><span class="kopklein">Waardering</span><div class="hart" id="hart1" onmouseover="selectie(1);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 1;"></div><div class="hart" id="hart2" onmouseover="selectie(2);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 2;"></div><div class="hart" id="hart3" onmouseover="selectie(3);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 3;"></div><div class="hart" id="hart4" onmouseover="selectie(4);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 4;"></div><div class="hart" id="hart5" onmouseover="selectie(5);" onmouseout="selectieTerug();" onclick="filterSelectieNr = 5;"></div></td>
+					<td><input type="checkbox" id="gelezen"><label for="gelezen" class="check"><span></span>Gelezen</label></td>
+				</tr>
+				<tr>
+					<td><div class="detailsopslaan">Lees later</div></td>
+					<td rowspan="2" colspan="2"><span class="kopklein">Commentaar</span><textarea></textarea><div class="detailscommentaaropslaan">Opslaan</div></td>
+				</tr>
+				<tr><td><input type="checkbox" id="favoriet"><label for="favoriet" class="ster"><span></span>Favoriet</label></td></tr>
+			</table>
+		</div>
+	</header>
+	
+	<div class="content view">
+		<div class="verhaaltitelbalk"><div class="knopvorige" onclick="location.href = 'index.html';">Vorige</div><span class="verhaaltitel">Nichterig</span></div>
+		<div class="verhaal">Dus ik stap de bus uit, met mijn zoon in mijn wagen, en ik schrik me daar toch het apenlazarus zeg! Werkelijk heel de omgeving rond Centraal Station is open gebroken! Ik zweer het je, één grote bouwput. En dan miezerde het ook nog een beetje, dus kun je nagaan. Dat werd me toch een kliederboel! Maar goed, ik moest nu eenmaal naar de biep.
+Ik wilde Stijloefeningen van Raymundo Queneau lezen, de schat.
+Maar dat zul je altijd zien: wil ik net die bibliotheek inlopen, word ik daar staande gehouden door een vrouwmens. Ze zegt tegen me, ‘do you know if this is the post office?’, zegt ze. Dus ik zeg: ‘The post office?’, zeg ik. ‘The post office? Mijn god, onder welke steen heb jij al die jaren gelegen,’ zeg ik. (Ja, in het Engels natuurlijk, want ze sprak Engels met een Frans accent, maar ik ga dat hier niet allemaal in het Engels herhalen. Het moet wel leesbaar blijven.) Waarop zij me een briefje laat zien waarop ik de Raadhuisstraat zie staan. Ik zeg ‘ja,’ zeg ik, ‘de Raadhuisstraat, ja, dáár heb je inderdaad wel een postkantoor,’ zeg ik. En ik was nog niet uitgesproken, of ze draait zich om en begint achter een achteruit rijdende auto aan te rennen. Nu vraag ik je: dat zijn toch geen manieren?
+Afijn. Nadat ik mijn verontwaardiging van me heb afgeschud, ga ik naar binnen. Naar de Q van Queneau. Sta ik daar dus een beetje m’n ogen uit m’n kassen te zoeken, maar iets vinden? Ho maar. V0or de zekerheid raadpleeg ik de computer. En je gelooft het niet, maar volgens de computer is Stijloefeningen gewoon aanwezig. Dus ik naar een medewerker, zo’n zwijgzame jongen uit een min of meer exotisch oord. Dus ik zeg, ‘zeg,’ zeg ik tegen hem, ‘ik ben naar Stijloefeningen van Raymundo Queneau aan het zoeken,’ zeg ik. ‘Maar op de plank is ie niet aanwezig, terwijl dat volgens de computer wel zou moeten,’ zeg ik. Dus hij zegt, ‘Kom maar mee,’ zegt ie. Dus ik achter z’n goddelijke kontje aan. Wij kijken. Maar niks hoor. Nada. Niente di tutti niente. Dus ik zeg tegen de medewerker, ik zeg ‘nou,’ zeg ik, ‘daar staan we dan.’ Dus hij zegt ‘ja,’ zegt ie, ‘daar staan we dan.’ Maar toen kwam het. Bij het magazijn zou nog een exemplaar aanwezig zijn.
+Hoefde ik alleen maar te mailen. Dus ik mailen. Krijg ik een kwartier later een mailtje terug: Stijloefeningen van Raymond Queneau ligt op de tweede verdieping. Waar ik al de hele middag aan het kijken ben! Dank je de koekoek. Dit land gaat naar de knoppen waar je bij staat.
+Afijn. U begrijpt dat ik zo spoedig mogelijk naar huis ben gegaan. Maar niet voordat ik in een alleraardigst boetiekje op het Bos en Lommerplein een paar schoentjes voor mijn zoontje heb gekocht.</div>
+	</div>
+	
+	<footer></footer>
+</div>
+</body>
+</html>
